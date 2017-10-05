@@ -2,17 +2,92 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+
 import org.testng.annotations.Test;
 
-import javax.xml.soap.Text;
+
 import java.util.concurrent.TimeUnit;
 
 
+
 public class RegistrationTest {
+
+    @Test
+    public void checkSignIn() throws InterruptedException {
+        WebDriver driver = new FirefoxDriver();
+        driver.manage().window().maximize();
+        driver.get("https://pfizerweb:AlwaysBeingGood6@pfpfda247rustg.prod.acquia-sites.com/");
+        WebElement Login = driver.findElement(By.cssSelector(".capture_modal_open.login"));
+        Login.click();
+        WebElement email = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_emailAddress"));
+        email.sendKeys("testemail131@yopmail.com");
+        WebElement password = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_password"));
+        password.sendKeys("zPau7ZXr");
+        WebElement SingIn = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_signInButton"));
+        SingIn.click();
+        Thread.sleep(10000);
+        WebElement StarQuiz = driver.findElement(By.cssSelector(".quiz-start-link"));
+        StarQuiz.click();
+
+
+        if (driver.getPageSource().contains("Виагра")) {
+            WebElement ViaGra = driver.findElement(By.xpath("//*[text()='Виагра']"));
+            ViaGra.click();
+            Thread.sleep(7000);
+            driver.findElement(By.cssSelector("#edit-next")).click();
+        } else if (driver.getPageSource().contains("Предметно-количественный учет")) {
+            WebElement Uchet1 = driver.findElement(By.xpath("//*[text()='Предметно-количественный учет']"));
+            Uchet1.click();
+            Thread.sleep(7000);
+            driver.findElement(By.cssSelector("#edit-next")).click();
+        } else {
+            WebElement Dni = driver.findElement(By.xpath("//*[text()='15 дней']"));
+            Dni.click();
+            Thread.sleep(7000);
+            driver.findElement(By.cssSelector("#edit-next")).click();
+        }
+        Thread.sleep(5000);
+
+
+        if (driver.getPageSource().contains("Предметно-количественный учет")) {
+            WebElement Uchet1 = driver.findElement(By.xpath("//*[text()='Предметно-количественный учет']"));
+            Uchet1.click();
+            Thread.sleep(7000);
+            driver.findElement(By.cssSelector("#edit-next")).click();
+        } else if (driver.getPageSource().contains("Виагра")) {
+            WebElement ViaGra = driver.findElement(By.xpath("//*[text()='Виагра']"));
+            ViaGra.click();
+            Thread.sleep(7000);
+            driver.findElement(By.cssSelector("#edit-next")).click();
+        } else {
+            WebElement Dni = driver.findElement(By.xpath("//*[text()='15 дней']"));
+            Dni.click();
+            Thread.sleep(7000);
+            driver.findElement(By.cssSelector("#edit-next")).click();
+        }
+        Thread.sleep(5000);
+
+        if (driver.getPageSource().contains("Предметно-количественный учет")) {
+            WebElement Uchet1 = driver.findElement(By.xpath("//*[text()='Предметно-количественный учет']"));
+            Uchet1.click();
+            Thread.sleep(7000);
+
+        } else if (driver.getPageSource().contains("Виагра")) {
+            WebElement ViaGra = driver.findElement(By.xpath("//*[text()='Виагра']"));
+            ViaGra.click();
+            Thread.sleep(7000);
+
+        } else {
+            WebElement Dni = driver.findElement(By.xpath("//*[text()='15 дней']"));
+            Dni.click();
+            Thread.sleep(7000);
+
+        }
+        driver.close();
+    }
+
+
+
 
     @Test
     public void checkRegistration() throws InterruptedException {
@@ -32,13 +107,12 @@ public class RegistrationTest {
         WebElement MiddleName = driver.findElement(By.cssSelector("#capture_traditionalRegistration_middleName"));
         MiddleName.sendKeys("MiddleName");
         WebElement Email = driver.findElement(By.cssSelector("#capture_traditionalRegistration_email"));
-        Email.sendKeys("testemail127@yopmail.com");
+        Email.sendKeys("testemail131@yopmail.com");
         WebElement Next2 = driver.findElement(By.cssSelector(".next_btn.second"));
         Next2.click();
         WebElement PrimaryAddress = driver.findElement(By.cssSelector("#capture_traditionalRegistration_primaryAddress_municipality"));
         PrimaryAddress.sendKeys("Москва");
-        //WebElement list = driver.findElement(By.cssSelector("#select2-capture_traditionalRegistration_primaryAddress_administrativeArea-container"));
-        //list.click();
+
         WebElement click = driver.findElement(By.xpath(".//*[@id='capture_traditionalRegistration_primaryAddress_administrativeArea']/option[2]"));
         click.click();
         WebElement Next3 = driver.findElement(By.cssSelector(".next_btn.third"));
@@ -66,41 +140,16 @@ public class RegistrationTest {
         Thread.sleep(5000);
         WebElement Next6 = driver.findElement(By.cssSelector(".capture_btn.capture_primary.grv-ru-ru.next_btn"));
         Next6.click();
-       // WebElement Answer1 = driver.findElement(By.cssSelector("#edit-question-741-answer-user-answer-126--2"));
-       // Answer1.click();
-        //WebElement Next7 = driver.findElement(By.cssSelector("#edit-next"));
-        //Next7.click();
+
 
         driver.close();
 
-
-
-
-
-
-
-
-
     }
-    @Test
-    public void checkLoginTesting() throws InterruptedException {
-        WebDriver driver = new FirefoxDriver();
-        driver.manage().window().maximize();
-        driver.get("https://pfizerweb:AlwaysBeingGood6@pfpfda247rustg.prod.acquia-sites.com/");
-        WebElement Login = driver.findElement(By.cssSelector(".capture_modal_open.login"));
-        Login.click();
-        WebElement email = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_emailAddress"));
-        email.sendKeys("testemail127@yopmail.com");
-        WebElement password = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_password"));
-        password.sendKeys("zPau7ZXr");
-        WebElement SingIn = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_signInButton"));
-        SingIn.click();
-        Thread.sleep(10000);
-        WebElement StarQuiz = driver.findElement(By.cssSelector(".quiz-start-link"));
-        StarQuiz.click();
 
 
 
 
-    }
+
+
+
 }
