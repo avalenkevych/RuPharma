@@ -2,30 +2,46 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-
-import java.util.concurrent.TimeUnit;
 
 
 
 public class RegistrationTest {
 
-    @Test
-    public void checkSignIn() throws InterruptedException {
-        WebDriver driver = new FirefoxDriver();
+    WebDriver driver;
+
+    @BeforeMethod
+    public void setUp(){
+        driver = new FirefoxDriver();
         driver.manage().window().maximize();
         driver.get("https://pfizerweb:AlwaysBeingGood6@pfpfda247rustg.prod.acquia-sites.com/");
+    }
+
+    @AfterMethod
+    public void tearDown(){
+    driver.close();
+    }
+
+    @Test
+    public void checkSignIn() throws InterruptedException {
+
         WebElement Login = driver.findElement(By.cssSelector(".capture_modal_open.login"));
         Login.click();
         WebElement email = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_emailAddress"));
-        email.sendKeys("testemail131@yopmail.com");
+        email.sendKeys("testemail137@yopmail.com");
         WebElement password = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_password"));
         password.sendKeys("zPau7ZXr");
         WebElement SingIn = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_signInButton"));
         SingIn.click();
-        Thread.sleep(10000);
+
+        WebDriverWait QuizButton = new WebDriverWait(driver,10);
+        QuizButton.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".quiz-start-link")));
+
         WebElement StarQuiz = driver.findElement(By.cssSelector(".quiz-start-link"));
         StarQuiz.click();
 
@@ -33,69 +49,74 @@ public class RegistrationTest {
         if (driver.getPageSource().contains("Виагра")) {
             WebElement ViaGra = driver.findElement(By.xpath("//*[text()='Виагра']"));
             ViaGra.click();
-            Thread.sleep(7000);
+            Thread.sleep(5000);
             driver.findElement(By.cssSelector("#edit-next")).click();
+
+
+
         } else if (driver.getPageSource().contains("Предметно-количественный учет")) {
             WebElement Uchet1 = driver.findElement(By.xpath("//*[text()='Предметно-количественный учет']"));
             Uchet1.click();
-            Thread.sleep(7000);
+
+            Thread.sleep(5000);
             driver.findElement(By.cssSelector("#edit-next")).click();
         } else {
             WebElement Dni = driver.findElement(By.xpath("//*[text()='15 дней']"));
             Dni.click();
-            Thread.sleep(7000);
             driver.findElement(By.cssSelector("#edit-next")).click();
+            Thread.sleep(5000);
         }
-        Thread.sleep(5000);
+
 
 
         if (driver.getPageSource().contains("Предметно-количественный учет")) {
             WebElement Uchet1 = driver.findElement(By.xpath("//*[text()='Предметно-количественный учет']"));
             Uchet1.click();
-            Thread.sleep(7000);
+            Thread.sleep(5000);
             driver.findElement(By.cssSelector("#edit-next")).click();
-        } else if (driver.getPageSource().contains("Виагра")) {
+
+        }
+
+        else if (driver.getPageSource().contains("Виагра")) {
             WebElement ViaGra = driver.findElement(By.xpath("//*[text()='Виагра']"));
             ViaGra.click();
-            Thread.sleep(7000);
+            Thread.sleep(5000);
             driver.findElement(By.cssSelector("#edit-next")).click();
         } else {
             WebElement Dni = driver.findElement(By.xpath("//*[text()='15 дней']"));
             Dni.click();
-            Thread.sleep(7000);
+            Thread.sleep(5000);
             driver.findElement(By.cssSelector("#edit-next")).click();
         }
-        Thread.sleep(5000);
+
 
         if (driver.getPageSource().contains("Предметно-количественный учет")) {
             WebElement Uchet1 = driver.findElement(By.xpath("//*[text()='Предметно-количественный учет']"));
             Uchet1.click();
-            Thread.sleep(7000);
+
 
         } else if (driver.getPageSource().contains("Виагра")) {
             WebElement ViaGra = driver.findElement(By.xpath("//*[text()='Виагра']"));
             ViaGra.click();
-            Thread.sleep(7000);
+
 
         } else {
             WebElement Dni = driver.findElement(By.xpath("//*[text()='15 дней']"));
             Dni.click();
-            Thread.sleep(7000);
+            //WebDriverWait Viagra2 = new WebDriverWait(driver,10);
+            //Viagra2.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#edit-next")));
 
         }
-        driver.close();
+
     }
-
-
 
 
     @Test
     public void checkRegistration() throws InterruptedException {
-        WebDriver driver = new FirefoxDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.get("https://pfizerweb:AlwaysBeingGood6@pfpfda247rustg.prod.acquia-sites.com/");
 
+
+        WebDriverWait wait2 = new WebDriverWait(driver, 10);
+        wait2.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".grv_register_open.register")));
         WebElement Registration = driver.findElement(By.cssSelector(".grv_register_open.register"));
         Registration.click();
         WebElement Next1 = driver.findElement(By.cssSelector(".next_btn.first"));
@@ -107,12 +128,11 @@ public class RegistrationTest {
         WebElement MiddleName = driver.findElement(By.cssSelector("#capture_traditionalRegistration_middleName"));
         MiddleName.sendKeys("MiddleName");
         WebElement Email = driver.findElement(By.cssSelector("#capture_traditionalRegistration_email"));
-        Email.sendKeys("testemail131@yopmail.com");
+        Email.sendKeys("testemail137@yopmail.com");
         WebElement Next2 = driver.findElement(By.cssSelector(".next_btn.second"));
         Next2.click();
         WebElement PrimaryAddress = driver.findElement(By.cssSelector("#capture_traditionalRegistration_primaryAddress_municipality"));
         PrimaryAddress.sendKeys("Москва");
-
         WebElement click = driver.findElement(By.xpath(".//*[@id='capture_traditionalRegistration_primaryAddress_administrativeArea']/option[2]"));
         click.click();
         WebElement Next3 = driver.findElement(By.cssSelector(".next_btn.third"));
@@ -137,19 +157,8 @@ public class RegistrationTest {
         CheckBox.click();
         WebElement createAccount = driver.findElement(By.cssSelector("#capture_traditionalRegistration_createAccountButton"));
         createAccount.click();
-        Thread.sleep(5000);
-        WebElement Next6 = driver.findElement(By.cssSelector(".capture_btn.capture_primary.grv-ru-ru.next_btn"));
-        Next6.click();
 
 
-        driver.close();
 
     }
-
-
-
-
-
-
-
 }
