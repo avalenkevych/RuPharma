@@ -44,7 +44,7 @@ public class EmailValidationTest {
         MiddleName.click();
 
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".capture_tip_error")));
+        wait.until(ExpectedConditions.textToBePresentInElement(By.cssSelector("#capture_traditionalRegistration_form_item_email > div.capture_tip_error"),"Адрес электронной почты: неверный формат"));
 
     }
 
