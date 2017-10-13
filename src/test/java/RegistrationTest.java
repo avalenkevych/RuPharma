@@ -19,12 +19,12 @@ public class RegistrationTest {
     public void setUp(){
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
-        driver.get("https://pfizerweb:AlwaysBeingGood6@pfpfda247rustg.prod.acquia-sites.com/");
+        driver.get("https://pfizerweb:AlwaysBeingGood6@pfpfda247rudev.prod.acquia-sites.com/");
     }
 
     @AfterMethod
     public void tearDown(){
-    driver.close();
+    driver.quit();
     }
 
     @Test
@@ -33,7 +33,7 @@ public class RegistrationTest {
         WebElement Login = driver.findElement(By.cssSelector(".capture_modal_open.login"));
         Login.click();
         WebElement email = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_emailAddress"));
-        email.sendKeys("testemail137@yopmail.com");
+        email.sendKeys("testemail139@yopmail.com");
         WebElement password = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_password"));
         password.sendKeys("zPau7ZXr");
         WebElement SingIn = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_signInButton"));
@@ -52,44 +52,47 @@ public class RegistrationTest {
             Thread.sleep(5000);
             driver.findElement(By.cssSelector("#edit-next")).click();
 
-
-
-        } else if (driver.getPageSource().contains("Предметно-количественный учет")) {
+        }
+        else if (driver.getPageSource().contains("Предметно-количественный учет")) {
             WebElement Uchet1 = driver.findElement(By.xpath("//*[text()='Предметно-количественный учет']"));
             Uchet1.click();
 
             Thread.sleep(5000);
             driver.findElement(By.cssSelector("#edit-next")).click();
-        } else {
+        }
+        else {
             WebElement Dni = driver.findElement(By.xpath("//*[text()='15 дней']"));
             Dni.click();
-            driver.findElement(By.cssSelector("#edit-next")).click();
-            Thread.sleep(5000);
-        }
-
-
-
-        if (driver.getPageSource().contains("Предметно-количественный учет")) {
-            WebElement Uchet1 = driver.findElement(By.xpath("//*[text()='Предметно-количественный учет']"));
-            Uchet1.click();
             Thread.sleep(5000);
             driver.findElement(By.cssSelector("#edit-next")).click();
 
         }
+        Thread.sleep(2000);
 
-        else if (driver.getPageSource().contains("Виагра")) {
+        if (driver.getPageSource().contains("Виагра")) {
             WebElement ViaGra = driver.findElement(By.xpath("//*[text()='Виагра']"));
             ViaGra.click();
             Thread.sleep(5000);
-            driver.findElement(By.cssSelector("#edit-next")).click();
-        } else {
+            driver.findElement(By.cssSelector(".ajax-processed")).click();
+
+
+        }
+        else if (driver.getPageSource().contains("Предметно-количественный учет")) {
+            WebElement Uchet1 = driver.findElement(By.xpath("//*[text()='Предметно-количественный учет']"));
+            Uchet1.click();
+
+            Thread.sleep(5000);
+            driver.findElement(By.cssSelector(".ajax-processed")).click();
+        }
+        else {
             WebElement Dni = driver.findElement(By.xpath("//*[text()='15 дней']"));
             Dni.click();
             Thread.sleep(5000);
-            driver.findElement(By.cssSelector("#edit-next")).click();
+            driver.findElement(By.cssSelector(".ajax-processed")).click();
+
         }
 
-
+        Thread.sleep(2000);
         if (driver.getPageSource().contains("Предметно-количественный учет")) {
             WebElement Uchet1 = driver.findElement(By.xpath("//*[text()='Предметно-количественный учет']"));
             Uchet1.click();
@@ -99,14 +102,13 @@ public class RegistrationTest {
             WebElement ViaGra = driver.findElement(By.xpath("//*[text()='Виагра']"));
             ViaGra.click();
 
-
-        } else {
+        }
+        else {
             WebElement Dni = driver.findElement(By.xpath("//*[text()='15 дней']"));
             Dni.click();
-            //WebDriverWait Viagra2 = new WebDriverWait(driver,10);
-            //Viagra2.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#edit-next")));
 
         }
+        Thread.sleep(2000);
 
     }
 
@@ -128,7 +130,7 @@ public class RegistrationTest {
         WebElement MiddleName = driver.findElement(By.cssSelector("#capture_traditionalRegistration_middleName"));
         MiddleName.sendKeys("MiddleName");
         WebElement Email = driver.findElement(By.cssSelector("#capture_traditionalRegistration_email"));
-        Email.sendKeys("testemail137@yopmail.com");
+        Email.sendKeys("testemail139@yopmail.com");
         WebElement Next2 = driver.findElement(By.cssSelector(".next_btn.second"));
         Next2.click();
         WebElement PrimaryAddress = driver.findElement(By.cssSelector("#capture_traditionalRegistration_primaryAddress_municipality"));
