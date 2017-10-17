@@ -115,7 +115,7 @@ public class EditProfileTest {
         WebElement Login = driver.findElement(By.cssSelector(".capture_modal_open.login"));
         Login.click();
         WebElement email = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_emailAddress"));
-        email.sendKeys("testemail139@yopmail.com");
+        email.sendKeys("testemail137@yopmail.com");
 
         WebElement password = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_password"));
         password.sendKeys("zPau7ZXr");
@@ -123,6 +123,36 @@ public class EditProfileTest {
         WebElement SingIn = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_signInButton"));
         SingIn.click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        WebElement username = driver.findElement(By.cssSelector("#block-system-user-menu > div > ul > li > a > span.username"));
+        username.click();
+
+        WebDriverWait wait1 = new WebDriverWait(driver, 10);
+        wait1.until(ExpectedConditions.textToBePresentInElement(By.xpath(".//*[text()=\"Нет закладок\"]"), "Нет закладок"));
+        WebElement ClickOnRoman = driver.findElement(By.cssSelector("#block-system-main-menu > div > ul > li.first.leaf > a"));
+        ClickOnRoman.click();
+        WebElement RomanHeader = driver.findElement(By.xpath(".//*[text()='Аптечный роман']"));
+        String ActualRomanHeader = RomanHeader.getText();
+        Assert.assertEquals(ActualRomanHeader,"Аптечный роман");
+        WebElement comics = driver.findElement(By.xpath(".//*[@class=\"field-content paywall-0\"]//img\t"));
+        comics.click();
+
+        WebDriverWait wait2 = new WebDriverWait(driver, 20);
+        wait2.until(ExpectedConditions.textToBePresentInElement(By.xpath(".//*[text()=\"Закладки\"]"), "Закладки"));
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+
+        driver.findElement(By.cssSelector("#main-content > div > div.panel-display.panel-2col-bricks.clearfix > div:nth-child(2) > div > div.panel-panel.panel-col-last > div > span")).click();
+        WebElement tab = driver.findElement(By.xpath(".//*[text()=\"В закладках\"]\t"));
+        String ActualTabName = tab.getText();
+        Assert.assertEquals(ActualTabName,"В закладках");
+        driver.navigate().refresh();
+
+
+
+
+
+
+
 
         
 
