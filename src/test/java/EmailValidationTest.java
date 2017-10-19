@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -59,6 +60,24 @@ public class EmailValidationTest {
             return data;
     }
 
+    @Test
+    public void checkLoginValidation(){
+
+        WebDriverWait wait3 = new WebDriverWait(driver,10);
+        wait3.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".capture_modal_open.login")));
+        WebElement Login = driver.findElement(By.cssSelector(".capture_modal_open.login"));
+        Login.click();
+        WebElement SingIn = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_signInButton"));
+        SingIn.click();
+
+        WebElement emailerror = driver.findElement(By.cssSelector("#capture_signIn_form_item_traditionalSignIn_emailAddress > div.capture_tip_error"));
+        Assert.assertEquals(emailerror.getText(), "Необходимо ввести адрес электронной почты");
+
+        WebElement passworderror = driver.findElement(By.xpath(".//*[text()=\"Необходимо ввести пароль\"]"));
+        Assert.assertEquals(passworderror.getText(), "Необходимо ввести пароль");
+
+
+    }
 }
 
 

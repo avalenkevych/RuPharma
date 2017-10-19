@@ -1,6 +1,7 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -11,6 +12,7 @@ import org.openqa.selenium.By;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 
 public class EditProfileTest {
@@ -20,7 +22,7 @@ public class EditProfileTest {
     public void setUp(){
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
-        driver.get("https://pfizerweb:AlwaysBeingGood6@pfpfda247rudev.prod.acquia-sites.com/");
+        driver.get("https://pfizerweb:AlwaysBeingGood6@pfpfda247rustg.prod.acquia-sites.com/");
     }
     @AfterMethod
     public void tearDown(){
@@ -29,6 +31,9 @@ public class EditProfileTest {
 
     @Test
     public void checkEditProfile() throws InterruptedException {
+
+        WebDriverWait wait3 = new WebDriverWait(driver,10);
+        wait3.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".capture_modal_open.login")));
         WebElement Login = driver.findElement(By.cssSelector(".capture_modal_open.login"));
         Login.click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -112,6 +117,8 @@ public class EditProfileTest {
     }
     @Test
     public void aaa() throws InterruptedException {
+        WebDriverWait wait3 = new WebDriverWait(driver,10);
+        wait3.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".capture_modal_open.login")));
         WebElement Login = driver.findElement(By.cssSelector(".capture_modal_open.login"));
         Login.click();
         WebElement email = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_emailAddress"));
@@ -135,14 +142,25 @@ public class EditProfileTest {
         Assert.assertEquals(ActualRomanHeader,"Аптечный роман");
         WebElement comics = driver.findElement(By.xpath(".//*[@class=\"field-content paywall-0\"]//img\t"));
         comics.click();
+        FirefoxProfile profile = new FirefoxProfile();
+        profile.setPreference("network.http.connection-timeout",10);
+
+
+
+
 
         WebDriverWait wait2 = new WebDriverWait(driver, 20);
         wait2.until(ExpectedConditions.textToBePresentInElement(By.xpath(".//*[text()=\"Закладки\"]"), "Закладки"));
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+
+        //driver.findElement(By.xpath(".//*[text()=\"Закладки\"]")).click();
+
 
 
         driver.findElement(By.cssSelector("#main-content > div > div.panel-display.panel-2col-bricks.clearfix > div:nth-child(2) > div > div.panel-panel.panel-col-last > div > span")).click();
         WebElement tab = driver.findElement(By.xpath(".//*[text()=\"В закладках\"]\t"));
+        profile.setPreference("network.http.connection-timeout",10);
         String ActualTabName = tab.getText();
         Assert.assertEquals(ActualTabName,"В закладках");
         driver.navigate().refresh();
