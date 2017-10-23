@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
+import pageOdjects.PageObjectForRegistration;
 
 
 
@@ -30,136 +30,95 @@ public class RegistrationTest {
     @Test
     public void checkSignIn() throws InterruptedException {
 
-        WebElement Login = driver.findElement(By.cssSelector(".capture_modal_open.login"));
-        Login.click();
-        WebElement email = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_emailAddress"));
-        email.sendKeys("testemail141@yopmail.com");
-        WebElement password = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_password"));
-        password.sendKeys("zPau7ZXr");
-        WebElement SingIn = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_signInButton"));
-        SingIn.click();
-
+        PageObjectForRegistration.Login(driver).click();
+        PageObjectForRegistration.Login_email(driver).sendKeys("testemail144@yopmail.com");
+        PageObjectForRegistration.Login_password(driver).sendKeys("zPau7ZXr");
+        PageObjectForRegistration.Login_SingIn(driver).click();
         WebDriverWait QuizButton = new WebDriverWait(driver,10);
         QuizButton.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".quiz-start-link")));
-
-        WebElement StarQuiz = driver.findElement(By.cssSelector(".quiz-start-link"));
-        StarQuiz.click();
-
+        PageObjectForRegistration.Start_Quiz(driver).click();
 
         if (driver.getPageSource().contains("Виагра")) {
-            WebElement ViaGra = driver.findElement(By.xpath("//*[text()='Виагра']"));
-            ViaGra.click();
-            Thread.sleep(5000);
-            driver.findElement(By.cssSelector("#edit-next")).click();
+
+            PageObjectForRegistration.ViaGra(driver).click();
+            WebDriverWait wait3 = new WebDriverWait(driver,10);
+            wait3.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#edit-next")));
+            PageObjectForRegistration.Quiz_Next_Btn(driver).click();
 
         }
         else if (driver.getPageSource().contains("Предметно-количественный учет")) {
-            WebElement Uchet1 = driver.findElement(By.xpath("//*[text()='Предметно-количественный учет']"));
-            Uchet1.click();
 
-            Thread.sleep(5000);
-            driver.findElement(By.cssSelector("#edit-next")).click();
+            PageObjectForRegistration.Uchet(driver).click();
+            WebDriverWait wait3 = new WebDriverWait(driver,10);
+            wait3.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#edit-next")));
+            PageObjectForRegistration.Quiz_Next_Btn(driver).click();
         }
         else {
-            WebElement Dni = driver.findElement(By.xpath("//*[text()='15 дней']"));
-            Dni.click();
-            Thread.sleep(5000);
-            driver.findElement(By.cssSelector("#edit-next")).click();
-
+            PageObjectForRegistration.Dni(driver).click();
+            WebDriverWait wait3 = new WebDriverWait(driver,10);
+            wait3.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#edit-next")));
+            PageObjectForRegistration.Quiz_Next_Btn(driver).click();
         }
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         if (driver.getPageSource().contains("Виагра")) {
-            WebElement ViaGra = driver.findElement(By.xpath("//*[text()='Виагра']"));
-            ViaGra.click();
-            Thread.sleep(5000);
-            driver.findElement(By.cssSelector(".ajax-processed")).click();
-
-
+            PageObjectForRegistration.ViaGra(driver).click();
+            WebDriverWait wait3 = new WebDriverWait(driver,10);
+            wait3.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#edit-next")));
+            PageObjectForRegistration.Quiz_Next_Btn(driver).click();
         }
         else if (driver.getPageSource().contains("Предметно-количественный учет")) {
-            WebElement Uchet1 = driver.findElement(By.xpath("//*[text()='Предметно-количественный учет']"));
-            Uchet1.click();
-
-            Thread.sleep(5000);
-            driver.findElement(By.cssSelector(".ajax-processed")).click();
+            PageObjectForRegistration.Uchet(driver).click();
+            WebDriverWait wait3 = new WebDriverWait(driver,10);
+            wait3.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#edit-next")));
+            PageObjectForRegistration.Quiz_Next_Btn(driver).click();
         }
         else {
-            WebElement Dni = driver.findElement(By.xpath("//*[text()='15 дней']"));
-            Dni.click();
-            Thread.sleep(5000);
-            driver.findElement(By.cssSelector(".ajax-processed")).click();
-
+            PageObjectForRegistration.Dni(driver).click();
+            WebDriverWait wait3 = new WebDriverWait(driver,10);
+            wait3.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#edit-next")));
+            PageObjectForRegistration.Quiz_Next_Btn(driver).click();
         }
 
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         if (driver.getPageSource().contains("Предметно-количественный учет")) {
-            WebElement Uchet1 = driver.findElement(By.xpath("//*[text()='Предметно-количественный учет']"));
-            Uchet1.click();
-
+            PageObjectForRegistration.Uchet(driver).click();
 
         } else if (driver.getPageSource().contains("Виагра")) {
-            WebElement ViaGra = driver.findElement(By.xpath("//*[text()='Виагра']"));
-            ViaGra.click();
-
+            PageObjectForRegistration.ViaGra(driver).click();
         }
         else {
-            WebElement Dni = driver.findElement(By.xpath("//*[text()='15 дней']"));
-            Dni.click();
-
+            PageObjectForRegistration.Dni(driver).click();
         }
         Thread.sleep(2000);
-
     }
 
 
     @Test
-    public void checkRegistration() throws InterruptedException {
-
+    public  void checkRegistration() throws InterruptedException {
 
         WebDriverWait wait2 = new WebDriverWait(driver, 10);
         wait2.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".grv_register_open.register")));
-        WebElement Registration = driver.findElement(By.cssSelector(".grv_register_open.register"));
-        Registration.click();
-        WebElement Next1 = driver.findElement(By.cssSelector(".next_btn.first"));
-        Next1.click();
-        WebElement Surname = driver.findElement(By.cssSelector("#capture_traditionalRegistration_familyName"));
-        Surname.sendKeys("Surname");
-        WebElement Name = driver.findElement(By.cssSelector("#capture_traditionalRegistration_givenName"));
-        Name.sendKeys("Name");
-        WebElement MiddleName = driver.findElement(By.cssSelector("#capture_traditionalRegistration_middleName"));
-        MiddleName.sendKeys("MiddleName");
-        WebElement Email = driver.findElement(By.cssSelector("#capture_traditionalRegistration_email"));
-        Email.sendKeys("testemail141@yopmail.com");
-        WebElement Next2 = driver.findElement(By.cssSelector(".next_btn.second"));
-        Next2.click();
-        WebElement PrimaryAddress = driver.findElement(By.cssSelector("#capture_traditionalRegistration_primaryAddress_municipality"));
-        PrimaryAddress.sendKeys("Москва");
-        WebElement click = driver.findElement(By.xpath(".//*[@id='capture_traditionalRegistration_primaryAddress_administrativeArea']/option[2]"));
-        click.click();
-        WebElement Next3 = driver.findElement(By.cssSelector(".next_btn.third"));
-        Next3.click();
-        WebElement Specialty = driver.findElement(By.xpath(".//*[@id='capture_traditionalRegistration_designation_specialty']/option[2] "));
-        Specialty.click();
-        WebElement Next4 = driver.findElement(By.cssSelector(".next_btn.fourth"));
-        Next4.click();
-        WebElement PhoneNumber = driver.findElement(By.cssSelector("#capture_traditionalRegistration_phoneNumber_mobile"));
-        PhoneNumber.sendKeys("+79991234567");
-        WebElement WorkPlace = driver.findElement(By.cssSelector("#capture_traditionalRegistration_primaryAddress_workplace"));
-        WorkPlace.sendKeys("ГКБ им. С.П.Ботника");
-        WebElement StreetName = driver.findElement(By.cssSelector("#capture_traditionalRegistration_primaryAddress_streetName1"));
-        StreetName.sendKeys("ул. Ломоносова 45");
-        WebElement Next5 = driver.findElement(By.cssSelector(".next_btn.fifth"));
-        Next5.click();
-        WebElement Password = driver.findElement(By.cssSelector("#capture_traditionalRegistration_traditionalRegistration_password"));
-        Password.sendKeys("zPau7ZXr");
-        WebElement PasswordConfirm = driver.findElement(By.cssSelector("#capture_traditionalRegistration_traditionalRegistration_passwordConfirm"));
-        PasswordConfirm.sendKeys("zPau7ZXr");
-        WebElement CheckBox = driver.findElement(By.cssSelector("#capture_traditionalRegistration_acknowledgement_professional"));
-        CheckBox.click();
-        WebElement createAccount = driver.findElement(By.cssSelector("#capture_traditionalRegistration_createAccountButton"));
-        createAccount.click();
-
+        PageObjectForRegistration.Registration(driver).click();
+        PageObjectForRegistration.Next1(driver).click();
+        PageObjectForRegistration.Surname(driver).sendKeys("Surname");
+        PageObjectForRegistration.Name(driver).sendKeys("Name");
+        PageObjectForRegistration.MiddleName(driver).sendKeys("MiddleName");
+        PageObjectForRegistration.Email(driver).sendKeys("testemail144@yopmail.com");
+        PageObjectForRegistration.Next2(driver).click();
+        PageObjectForRegistration.Primary_Address(driver).sendKeys("Москва");
+        PageObjectForRegistration.State(driver).click();
+        PageObjectForRegistration.Next3(driver).click();
+        PageObjectForRegistration.Specialty(driver).click();
+        PageObjectForRegistration.Next4(driver).click();
+        PageObjectForRegistration.Phone_Number(driver).sendKeys("+79991234567");
+        PageObjectForRegistration.Work_Place(driver).sendKeys("ГКБ им. С.П.Ботника");
+        PageObjectForRegistration.Street_Name(driver).sendKeys("ул. Ломоносова 45");
+        PageObjectForRegistration.Next5(driver).click();
+        PageObjectForRegistration.Password(driver).sendKeys("zPau7ZXr");
+        PageObjectForRegistration.Password_Confirm(driver).sendKeys("zPau7ZXr");
+        PageObjectForRegistration.CheckBox(driver).click();
+        PageObjectForRegistration.Create_Account_Button(driver).click();
         Thread.sleep(4000);
 
 
