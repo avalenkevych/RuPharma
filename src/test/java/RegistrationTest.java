@@ -33,7 +33,7 @@ public class RegistrationTest {
         WebElement Login = driver.findElement(By.cssSelector(".capture_modal_open.login"));
         Login.click();
         WebElement email = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_emailAddress"));
-        email.sendKeys("testemail140@yopmail.com");
+        email.sendKeys("testemail141@yopmail.com");
         WebElement password = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_password"));
         password.sendKeys("zPau7ZXr");
         WebElement SingIn = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_signInButton"));
@@ -130,7 +130,7 @@ public class RegistrationTest {
         WebElement MiddleName = driver.findElement(By.cssSelector("#capture_traditionalRegistration_middleName"));
         MiddleName.sendKeys("MiddleName");
         WebElement Email = driver.findElement(By.cssSelector("#capture_traditionalRegistration_email"));
-        Email.sendKeys("testemail139@yopmail.com");
+        Email.sendKeys("testemail141@yopmail.com");
         WebElement Next2 = driver.findElement(By.cssSelector(".next_btn.second"));
         Next2.click();
         WebElement PrimaryAddress = driver.findElement(By.cssSelector("#capture_traditionalRegistration_primaryAddress_municipality"));
@@ -159,6 +159,8 @@ public class RegistrationTest {
         CheckBox.click();
         WebElement createAccount = driver.findElement(By.cssSelector("#capture_traditionalRegistration_createAccountButton"));
         createAccount.click();
+
+        Thread.sleep(4000);
 
 
 

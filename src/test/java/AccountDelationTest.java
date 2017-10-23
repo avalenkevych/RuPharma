@@ -30,10 +30,11 @@ public class AccountDelationTest {
         wait3.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".capture_modal_open.login")));
         WebElement Login = driver.findElement(By.cssSelector(".capture_modal_open.login"));
         Login.click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        WebDriverWait wait4 = new WebDriverWait(driver,10);
+        wait4.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#capture_signIn_traditionalSignIn_emailAddress")));
         WebElement email = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_emailAddress"));
 
-        email.sendKeys("testemail140@yopmail.com");
+        email.sendKeys("testemail141@yopmail.com");
         WebElement password = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_password"));
         password.sendKeys("zPau7ZXr");
         WebElement SingIn = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_signInButton"));

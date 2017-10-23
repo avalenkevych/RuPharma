@@ -36,10 +36,11 @@ public class EditProfileTest {
         wait3.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".capture_modal_open.login")));
         WebElement Login = driver.findElement(By.cssSelector(".capture_modal_open.login"));
         Login.click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        WebDriverWait wait4 = new WebDriverWait(driver,10);
+        wait4.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#capture_signIn_traditionalSignIn_emailAddress")));
         WebElement email = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_emailAddress"));
 
-        email.sendKeys("testemail140@yopmail.com");
+        email.sendKeys("testemail141@yopmail.com");
         WebElement password = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_password"));
         password.sendKeys("zPau7ZXr");
         WebElement SingIn = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_signInButton"));
@@ -54,7 +55,7 @@ public class EditProfileTest {
         photo.click();
         driver.findElement(By.cssSelector("#edit-image-file-upload")).click();
         WebElement frame = driver.switchTo().activeElement();
-        frame.sendKeys("D:\\AutomationJava\\RuPharna-master\\src\\test\\logo.jpg");
+        frame.sendKeys("D:\\AutomationJava\\RuPharna\\src\\test\\logo.jpg");
 
         WebDriverWait wait = new WebDriverWait(driver, 40);
         wait.until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector("#image-popup > div"),"Ваше фото изменено"));
@@ -69,23 +70,23 @@ public class EditProfileTest {
         WebElement name_upd = driver.findElement(By.cssSelector("#capture_editProfile_givenName"));
         name_upd.clear();
         name_upd.sendKeys("Name Updated");
-        Assert.assertEquals(name_upd.getAttribute("value"), "Name updated");
+        Assert.assertEquals(name_upd.getAttribute("value"), "Name Updated");
 
 
         WebElement surname_upd = driver.findElement(By.cssSelector("#capture_editProfile_familyName"));
         surname_upd.clear();
         surname_upd.sendKeys("Surname Updated");
-        Assert.assertEquals(surname_upd.getAttribute("value"), "Surname updated");
+        Assert.assertEquals(surname_upd.getAttribute("value"), "Surname Updated");
 
         WebElement middlename_upd = driver.findElement(By.cssSelector("#capture_editProfile_middleName"));
         middlename_upd.clear();
         middlename_upd.sendKeys("MiddleName Updated");
-        Assert.assertEquals(middlename_upd.getAttribute("value"), "Middlename updated");
+        Assert.assertEquals(middlename_upd.getAttribute("value"), "MiddleName Updated");
 
         WebElement PrimaryAddress_upd = driver.findElement(By.cssSelector("#capture_editProfile_primaryAddress_municipality"));
         PrimaryAddress_upd.clear();
         PrimaryAddress_upd.sendKeys("Санкт-Петербург");
-        Assert.assertEquals(PrimaryAddress_upd.getAttribute("value"), "Санкт-петербург");
+        Assert.assertEquals(PrimaryAddress_upd.getAttribute("value"), "Санкт-Петербург");
 
 
 
