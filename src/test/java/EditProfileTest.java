@@ -115,14 +115,15 @@ public class EditProfileTest {
 
 
     }
-    @Test
+    /*@Test
     public void aaa() throws InterruptedException {
         WebDriverWait wait3 = new WebDriverWait(driver,10);
         wait3.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".capture_modal_open.login")));
         WebElement Login = driver.findElement(By.cssSelector(".capture_modal_open.login"));
         Login.click();
+
         WebElement email = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_emailAddress"));
-        email.sendKeys("testemail137@yopmail.com");
+        email.sendKeys("testemail127@yopmail.com");
 
         WebElement password = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_password"));
         password.sendKeys("zPau7ZXr");
@@ -142,15 +143,9 @@ public class EditProfileTest {
         Assert.assertEquals(ActualRomanHeader,"Аптечный роман");
         WebElement comics = driver.findElement(By.xpath(".//*[@class=\"field-content paywall-0\"]//img\t"));
         comics.click();
-        FirefoxProfile profile = new FirefoxProfile();
-        profile.setPreference("network.http.connection-timeout",10);
 
-
-
-
-
-        WebDriverWait wait2 = new WebDriverWait(driver, 20);
-        wait2.until(ExpectedConditions.textToBePresentInElement(By.xpath(".//*[text()=\"Закладки\"]"), "Закладки"));
+       // WebDriverWait wait2 = new WebDriverWait(driver, 20);
+        //wait2.until(ExpectedConditions.textToBePresentInElement(By.xpath(".//*[text()=\"Закладки\"]"), "Закладки"));
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 
@@ -159,11 +154,12 @@ public class EditProfileTest {
 
 
         driver.findElement(By.cssSelector("#main-content > div > div.panel-display.panel-2col-bricks.clearfix > div:nth-child(2) > div > div.panel-panel.panel-col-last > div > span")).click();
-        WebElement tab = driver.findElement(By.xpath(".//*[text()=\"В закладках\"]\t"));
-        profile.setPreference("network.http.connection-timeout",10);
-        String ActualTabName = tab.getText();
-        Assert.assertEquals(ActualTabName,"В закладках");
         driver.navigate().refresh();
+        username.click();
+
+        WebDriverWait wait2 = new WebDriverWait(driver, 10);
+        wait2.until(ExpectedConditions.textToBePresentInElement(By.xpath(".//*[text()=\"Закладки 1\"]"), "Закладки 1"));
+
 
 
 
@@ -177,5 +173,5 @@ public class EditProfileTest {
 
 
         //Thread.sleep(10000);
-    }
+    }*/
 }
