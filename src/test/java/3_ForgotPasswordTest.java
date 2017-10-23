@@ -15,7 +15,7 @@ public class ForgotPasswordTest {
     public void setUp(){
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
-        driver.get("https://pfizerweb:AlwaysBeingGood6@pfpfda247rudev.prod.acquia-sites.com/");
+        driver.get("https://pfizerweb:AlwaysBeingGood6@pfpfda247rustg.prod.acquia-sites.com/");
     }
     @AfterMethod
     public void tearDown(){
@@ -29,7 +29,7 @@ public class ForgotPasswordTest {
         WebElement ForgotPsw = driver.findElement(By.cssSelector("#capture_signIn_userInformationForm > div.capture_form_item2 > a.grv-ru-ru"));
         ForgotPsw.click();
         WebElement Email = driver.findElement(By.cssSelector("#capture_forgotPassword_traditionalSignIn_emailAddress"));
-        Email.sendKeys("testemail138@yopmail.com");
+        Email.sendKeys("testemail140@yopmail.com");
         WebElement SentButton = driver.findElement(By.cssSelector("#capture_forgotPassword_forgotPassword_sendButton"));
         SentButton.click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
