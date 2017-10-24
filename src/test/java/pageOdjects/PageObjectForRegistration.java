@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class PageObjectForRegistration {
+    WebDriver driver;
     public static WebElement element=null;
     public static WebElement Registration(WebDriver driver){
         element = driver.findElement(By.cssSelector(".grv_register_open.register"));
@@ -124,6 +125,23 @@ public class PageObjectForRegistration {
         element = driver.findElement(By.xpath("//*[text()='15 дней']"));
         return element;
     }
+    @FindBy (css =".capture_modal_open.login")
+    public WebElement Login;
+    @FindBy (id = "capture_signIn_traditionalSignIn_emailAddress")
+    public WebElement Login_Email;
+    @FindBy (id = "capture_signIn_traditionalSignIn_password")
+    public WebElement Login_Password;
+    @FindBy (id = "capture_signIn_traditionalSignIn_signInButton")
+    public WebElement SignIn;
+    public void Login_Action (String sUsername, String sPassword){
+        Login.click();
+        Login_Email.sendKeys(sUsername);
+        Login_Password.sendKeys(sPassword);
+        SignIn.click();
+    }
+
+
+
 
 
 
