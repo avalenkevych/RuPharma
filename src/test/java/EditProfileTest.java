@@ -1,7 +1,6 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
@@ -18,6 +17,7 @@ import java.util.concurrent.TimeoutException;
 import pageOdjects.PageObjectForRegistration;
 import pageOdjects.POF_EditProfile;
 import org.openqa.selenium.support.PageFactory;
+import pageOdjects.Waiters;
 
 
 public class EditProfileTest {
@@ -41,20 +41,21 @@ public class EditProfileTest {
 
         POF_EditProfile EditProfile = PageFactory.initElements(driver,POF_EditProfile.class);
         PageObjectForRegistration UserLogin = PageFactory.initElements(driver,PageObjectForRegistration.class);
-        UserLogin.Login_Action("testemail142@yopmail.com","zPau7ZXr");
-        WebDriverWait wait3 = new WebDriverWait(driver,10);
-        wait3.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".capture_modal_open.login")));
-        WebDriverWait wait4 = new WebDriverWait(driver,10);
-        wait4.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#capture_signIn_traditionalSignIn_emailAddress")));
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        Waiters wait = new Waiters(driver);
+        // wait for presence login link
+        wait.loginLinkWaiter(UserLogin.Login);
+        UserLogin.Login_Action("testemail143@yopmail.com","zPau7ZXr");
+        //wait for successful login and displayed username
+        wait.successfullLoginWaiter(EditProfile.username_link);
         EditProfile.username_link.click();
         EditProfile.Photo.click();
         driver.findElement(By.cssSelector("#edit-image-file-upload")).click();
         WebElement frame = driver.switchTo().activeElement();
         frame.sendKeys("D:\\AutomationJava\\RuPharna\\src\\test\\logo.jpg");
-        WebDriverWait wait = new WebDriverWait(driver, 40);
-        wait.until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector("#image-popup > div"),"Ваше фото изменено"));
-        driver.findElement(By.xpath(".//*[text()=\"Ok, спасибо\"]")).click();
+        //wait for image upload message
+        wait.confirmMessageOfImageUploadWaiter(EditProfile.imageUploadMessage);
+        EditProfile.imageUploadConfirm.click();
+
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         EditProfile.ChangeData_Btn.click();
         EditProfile.Update_Name_Action("Name Updated");
@@ -66,8 +67,6 @@ public class EditProfileTest {
         EditProfile.Update_Street_Action("ул. Ломоносова 85");
         EditProfile.Checkbox.click();
         EditProfile.Save_Btn.click();
-        WebDriverWait wait1 = new WebDriverWait(driver, 5);
-        wait1.until(ExpectedConditions.textToBePresentInElement(By.xpath(".//*[text()=\"Ваш профиль был сохранен.\"]"), "Ваш профиль был сохранен"));
-
+        wait.saveAccountWaiter(EditProfile.saveAccountMessage);
     }
 }

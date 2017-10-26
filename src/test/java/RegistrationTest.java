@@ -2,13 +2,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pageOdjects.PageObjectForRegistration;
-
+import pageOdjects.Waiters;
 
 
 public class RegistrationTest {
@@ -19,7 +20,7 @@ public class RegistrationTest {
     public void setUp(){
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
-        driver.get("https://pfizerweb:AlwaysBeingGood6@pfpfda247rustg.prod.acquia-sites.com/");
+        driver.get("https://pfizerweb:AlwaysBeingGood6@pfpfda247rudev.prod.acquia-sites.com/");
     }
 
     @AfterMethod
@@ -30,12 +31,15 @@ public class RegistrationTest {
     @Test
     public void checkSignIn() throws InterruptedException {
 
-        PageObjectForRegistration.Login(driver).click();
-        PageObjectForRegistration.Login_email(driver).sendKeys("testemail144@yopmail.com");
-        PageObjectForRegistration.Login_password(driver).sendKeys("zPau7ZXr");
-        PageObjectForRegistration.Login_SingIn(driver).click();
-        WebDriverWait QuizButton = new WebDriverWait(driver,10);
-        QuizButton.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".quiz-start-link")));
+        PageObjectForRegistration UserLogin = PageFactory.initElements(driver,PageObjectForRegistration.class);
+        Waiters wait = new Waiters(driver);
+        // wait for presence login link
+        wait.loginLinkWaiter(UserLogin.Login);
+        UserLogin.Login_Action("testemail142@yopmail.com","zPau7ZXr");
+        wait.quizWaiter(PageObjectForRegistration.Start_Quiz(driver));
+
+        //WebDriverWait QuizButton = new WebDriverWait(driver,10);
+        //QuizButton.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".quiz-start-link")));
         PageObjectForRegistration.Start_Quiz(driver).click();
 
         if (driver.getPageSource().contains("Виагра")) {
@@ -97,6 +101,7 @@ public class RegistrationTest {
     @Test
     public  void checkRegistration() throws InterruptedException {
 
+        //Waiters wait = new Waiters(driver);
         WebDriverWait wait2 = new WebDriverWait(driver, 10);
         wait2.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".grv_register_open.register")));
         PageObjectForRegistration.Registration(driver).click();
@@ -104,7 +109,7 @@ public class RegistrationTest {
         PageObjectForRegistration.Surname(driver).sendKeys("Surname");
         PageObjectForRegistration.Name(driver).sendKeys("Name");
         PageObjectForRegistration.MiddleName(driver).sendKeys("MiddleName");
-        PageObjectForRegistration.Email(driver).sendKeys("testemail144@yopmail.com");
+        PageObjectForRegistration.Email(driver).sendKeys("testemail142@yopmail.com");
         PageObjectForRegistration.Next2(driver).click();
         PageObjectForRegistration.Primary_Address(driver).sendKeys("Москва");
         PageObjectForRegistration.State(driver).click();

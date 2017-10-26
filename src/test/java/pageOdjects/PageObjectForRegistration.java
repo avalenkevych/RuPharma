@@ -2,6 +2,7 @@ package pageOdjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -89,22 +90,6 @@ public class PageObjectForRegistration {
         element = driver.findElement(By.cssSelector("#capture_traditionalRegistration_createAccountButton"));
         return element;
     }
-    public static WebElement Login (WebDriver driver){
-        element = driver.findElement(By.cssSelector(".capture_modal_open.login"));
-        return element;
-    }
-    public static WebElement Login_email(WebDriver driver){
-        element = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_emailAddress"));
-        return element;
-    }
-    public static WebElement Login_password(WebDriver driver){
-        element = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_password"));
-        return element;
-    }
-    public static WebElement Login_SingIn(WebDriver driver){
-        element = driver.findElement(By.cssSelector("#capture_signIn_traditionalSignIn_signInButton"));
-        return element;
-    }
     public static WebElement Start_Quiz(WebDriver driver){
         element = driver.findElement(By.cssSelector(".quiz-start-link"));
         return element;
@@ -126,12 +111,16 @@ public class PageObjectForRegistration {
         return element;
     }
     @FindBy (css =".capture_modal_open.login")
+    @CacheLookup
     public WebElement Login;
     @FindBy (id = "capture_signIn_traditionalSignIn_emailAddress")
+    @CacheLookup
     public WebElement Login_Email;
     @FindBy (id = "capture_signIn_traditionalSignIn_password")
+    @CacheLookup
     public WebElement Login_Password;
     @FindBy (id = "capture_signIn_traditionalSignIn_signInButton")
+    @CacheLookup
     public WebElement SignIn;
     public void Login_Action (String sUsername, String sPassword){
         Login.click();
@@ -139,6 +128,9 @@ public class PageObjectForRegistration {
         Login_Password.sendKeys(sPassword);
         SignIn.click();
     }
+
+    @FindBy(css = ".quiz-start-link")
+    public WebElement quizBtn;
 
 
 

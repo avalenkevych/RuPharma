@@ -1,12 +1,18 @@
 package pageOdjects;
 import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.xml.sax.Locator;
 
 public class POF_EditProfile {
     public WebDriver driver;
@@ -34,6 +40,20 @@ public class POF_EditProfile {
     public WebElement Checkbox;
     @FindBy(id="capture_editProfile_saveButton")
     public WebElement Save_Btn;
+    @FindBy(css="#delete-account-link-wrapper > a")
+    public WebElement Delete_Btn;
+    @FindBy(id="edit-submit")
+    public WebElement confirmDeleteAccountBtn;
+    @FindBy(xpath = ".//*[@class=\"messages status\"]\t")
+    public WebElement confirmMessage;
+    @FindBy(css="#image-popup > div")
+    public WebElement imageUploadMessage;
+    @FindBy (xpath = ".//*[text()=\"Ok, спасибо\"]")
+    public WebElement imageUploadConfirm;
+    @FindBy(xpath = ".//*[text()=\"Ваш профиль был сохранен.\"]")
+    public WebElement saveAccountMessage;
+
+
     public void Update_Name_Action (String sName){
         Name_Upd.clear();
         Name_Upd.sendKeys(sName);
@@ -69,6 +89,14 @@ public class POF_EditProfile {
         Street_Upd.sendKeys(sStreet);
         Assert.assertEquals(Street_Upd.getAttribute("value"), "ул. Ломоносова 85");
     }
+
+
+
+    /*public void Upload_Image_Action(String sImage){
+        uploadImageBtn.click();
+
+        uploadImageBtn.sendKeys(sImage);
+    }*/
 
 
 
