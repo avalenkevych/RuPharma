@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19f84d71-16d4-4974-b8a6-879369343cc3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/AccountDelationTest.class" afterPath="$PROJECT_DIR$/target/test-classes/AccountDelationTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/EditProfileTest.class" afterPath="$PROJECT_DIR$/target/test-classes/EditProfileTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/RegistrationTest.class" afterPath="$PROJECT_DIR$/target/test-classes/RegistrationTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/pageOdjects/PageObjectForRegistration.class" afterPath="$PROJECT_DIR$/target/test-classes/pageOdjects/PageObjectForRegistration.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/AccountDelationTest.java" afterPath="$PROJECT_DIR$/src/test/java/AccountDelationTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/EditProfileTest.java" afterPath="$PROJECT_DIR$/src/test/java/EditProfileTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/EmailValidationTest.java" afterPath="$PROJECT_DIR$/src/test/java/EmailValidationTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ForgotPasswordTest.java" afterPath="$PROJECT_DIR$/src/test/java/ForgotPasswordTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/RegistrationTest.java" afterPath="$PROJECT_DIR$/src/test/java/RegistrationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/pageOdjects/POF_EditProfile.java" afterPath="$PROJECT_DIR$/src/test/java/pageOdjects/POF_EditProfile.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/pageOdjects/PageObjectForRegistration.java" afterPath="$PROJECT_DIR$/src/test/java/pageOdjects/PageObjectForRegistration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/pageOdjects/Waiters.java" afterPath="$PROJECT_DIR$/src/test/java/pageOdjects/Waiters.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +24,8 @@
       <file leaf-file-name="RegistrationTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/RegistrationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="37" column="30" lean-forward="true" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+            <state relative-caret-position="550">
+              <caret line="38" column="44" lean-forward="false" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -36,14 +34,12 @@
       <file leaf-file-name="PageObjectForRegistration.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/pageOdjects/PageObjectForRegistration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1210">
-              <caret line="132" column="30" lean-forward="false" selection-start-line="132" selection-start-column="30" selection-end-line="132" selection-end-column="30" />
+            <state relative-caret-position="1474">
+              <caret line="138" column="33" lean-forward="false" selection-start-line="138" selection-start-column="33" selection-end-line="138" selection-end-column="33" />
               <folding>
-                <element signature="method#Registration#0;class#PageObjectForRegistration#0" expanded="false" />
                 <element signature="method#Next1#0;class#PageObjectForRegistration#0" expanded="false" />
                 <element signature="method#Surname#0;class#PageObjectForRegistration#0" expanded="false" />
                 <element signature="method#Name#0;class#PageObjectForRegistration#0" expanded="false" />
-                <element signature="method#MiddleName#0;class#PageObjectForRegistration#0" expanded="false" />
                 <element signature="method#Email#0;class#PageObjectForRegistration#0" expanded="false" />
                 <element signature="method#Next2#0;class#PageObjectForRegistration#0" expanded="false" />
                 <element signature="method#Primary_Address#0;class#PageObjectForRegistration#0" expanded="false" />
@@ -68,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccountDelationTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AccountDelationTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/AccountDelationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="43" column="39" lean-forward="false" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+            <state relative-caret-position="273">
+              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -81,7 +77,7 @@
       <file leaf-file-name="POF_EditProfile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/pageOdjects/POF_EditProfile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
+            <state relative-caret-position="321">
               <caret line="51" column="40" lean-forward="false" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
               <folding />
             </state>
@@ -91,8 +87,8 @@
       <file leaf-file-name="Waiters.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/pageOdjects/Waiters.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="39" column="65" lean-forward="false" selection-start-line="39" selection-start-column="65" selection-end-line="39" selection-end-column="65" />
+            <state relative-caret-position="369">
+              <caret line="55" column="123" lean-forward="false" selection-start-line="55" selection-start-column="123" selection-end-line="55" selection-end-column="123" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,11 +96,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EditProfileTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EmailValidationTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/EmailValidationTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="537">
+              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditProfileTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/EditProfileTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="46" column="44" lean-forward="false" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
+            <state relative-caret-position="484">
+              <caret line="43" column="43" lean-forward="true" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="POF_ForgotPsw.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pageOdjects/POF_ForgotPsw.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -123,11 +139,14 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>capture_signIn_traditionalSignIn_signInButton</find>
       <find>dele</find>
       <find>Delete</find>
       <find>Del</find>
       <find>.grv_register_open.register</find>
+      <find>.capture_modal_open.login</find>
+      <find>capture_signIn_traditionalSignIn_signInButton</find>
+      <find>#capture_traditionalRegistration_email</find>
+      <find>#capture_traditionalRegistration_middleName</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -141,15 +160,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/EmailValidationTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ForgotPasswordTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/PageObjectForRegistration.java" />
-        <option value="$PROJECT_DIR$/src/test/java/AccountDelationTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pageOdjects/POF_EditProfile.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ForgotPasswordTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pageOdjects/POF_ForgotPsw.java" />
+        <option value="$PROJECT_DIR$/src/test/java/EditProfileTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/pageOdjects/PageObjectForRegistration.java" />
         <option value="$PROJECT_DIR$/src/test/java/pageOdjects/Waiters.java" />
+        <option value="$PROJECT_DIR$/src/test/java/EmailValidationTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/RegistrationTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/pageOdjects/POF_EditProfile.java" />
-        <option value="$PROJECT_DIR$/src/test/java/EditProfileTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/AccountDelationTest.java" />
       </list>
     </option>
   </component>
@@ -243,8 +263,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.EditProfileTest.checkEditProfile">
-    <configuration name="AccountDelationTest.checkAccountDeletion" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.AccountDelationTest">
+    <configuration name="AccountDelationTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="RuPharmacy" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -252,9 +272,9 @@
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AccountDelationTest" />
-      <option name="METHOD_NAME" value="checkAccountDeletion" />
+      <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -298,17 +318,44 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="EditProfileTest.checkEditProfile" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="EmailValidationTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="RuPharmacy" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="EditProfileTest" />
-      <option name="METHOD_NAME" value="checkEditProfile" />
+      <option name="MAIN_CLASS_NAME" value="EmailValidationTest" />
+      <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="ForgotPasswordTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="RuPharmacy" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ForgotPasswordTest" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -336,33 +383,6 @@
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-    </configuration>
-    <configuration name="RegistrationTest.checkSignIn" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="RuPharmacy" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RegistrationTest" />
-      <option name="METHOD_NAME" value="checkSignIn" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -461,19 +481,19 @@
       <listeners />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="TestNG.AccountDelationTest.checkAccountDeletion" />
-      <item index="1" class="java.lang.String" itemvalue="TestNG.RegistrationTest" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.RegistrationTest.checkSignIn" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.EditProfileTest.checkEditProfile" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.EditProfileTest" />
+      <item index="0" class="java.lang.String" itemvalue="TestNG.RegistrationTest" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.EditProfileTest" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.ForgotPasswordTest" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.EmailValidationTest" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.AccountDelationTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.EditProfileTest.checkEditProfile" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.RegistrationTest.checkSignIn" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.RegistrationTest" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.AccountDelationTest" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.EmailValidationTest" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.ForgotPasswordTest" />
         <item index="3" class="java.lang.String" itemvalue="TestNG.EditProfileTest" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.AccountDelationTest.checkAccountDeletion" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.RegistrationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -491,40 +511,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="EditProfileTest_checkEditProfile - 2017.10.26 at 12h 00m 11s.xml">
-      <configuration name="EditProfileTest.checkEditProfile" configurationId="TestNG" />
+    <history-entry file="AccountDelationTest - 2017.10.26 at 16h 31m 52s.xml">
+      <configuration name="AccountDelationTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="EditProfileTest_checkEditProfile - 2017.10.26 at 12h 01m 14s.xml">
-      <configuration name="EditProfileTest.checkEditProfile" configurationId="TestNG" />
+    <history-entry file="AccountDelationTest - 2017.10.26 at 16h 33m 29s.xml">
+      <configuration name="AccountDelationTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="EditProfileTest_checkEditProfile - 2017.10.26 at 12h 02m 37s.xml">
-      <configuration name="EditProfileTest.checkEditProfile" configurationId="TestNG" />
+    <history-entry file="EditProfileTest - 2017.10.26 at 16h 28m 44s.xml">
+      <configuration name="EditProfileTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="EditProfileTest_checkEditProfile - 2017.10.26 at 12h 07m 42s.xml">
-      <configuration name="EditProfileTest.checkEditProfile" configurationId="TestNG" />
+    <history-entry file="EmailValidationTest - 2017.10.26 at 16h 31m 02s.xml">
+      <configuration name="EmailValidationTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="EditProfileTest_checkEditProfile - 2017.10.26 at 12h 09m 14s.xml">
-      <configuration name="EditProfileTest.checkEditProfile" configurationId="TestNG" />
+    <history-entry file="EmailValidationTest_checkEmailValidationField - 2017.10.26 at 16h 17m 05s.xml">
+      <configuration name="EmailValidationTest.checkEmailValidationField" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="EditProfileTest_checkEditProfile - 2017.10.26 at 12h 14m 02s.xml">
-      <configuration name="EditProfileTest.checkEditProfile" configurationId="TestNG" />
+    <history-entry file="EmailValidationTest_checkEmailValidationField - 2017.10.26 at 16h 18m 52s.xml">
+      <configuration name="EmailValidationTest.checkEmailValidationField" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="EditProfileTest_checkEditProfile - 2017.10.26 at 12h 15m 42s.xml">
-      <configuration name="EditProfileTest.checkEditProfile" configurationId="TestNG" />
+    <history-entry file="EmailValidationTest_checkLoginValidation_(1) - 2017.10.26 at 16h 04m 30s.xml">
+      <configuration name="EmailValidationTest.checkLoginValidation (1)" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="EditProfileTest_checkEditProfile - 2017.10.26 at 12h 17m 43s.xml">
-      <configuration name="EditProfileTest.checkEditProfile" configurationId="TestNG" />
+    <history-entry file="EmailValidationTest_checkLoginValidation_(1) - 2017.10.26 at 16h 05m 46s.xml">
+      <configuration name="EmailValidationTest.checkLoginValidation (1)" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="EditProfileTest_checkEditProfile - 2017.10.26 at 12h 18m 13s.xml">
-      <configuration name="EditProfileTest.checkEditProfile" configurationId="TestNG" />
+    <history-entry file="ForgotPasswordTest - 2017.10.26 at 16h 29m 26s.xml">
+      <configuration name="ForgotPasswordTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="EditProfileTest_checkEditProfile - 2017.10.26 at 12h 20m 12s.xml">
-      <configuration name="EditProfileTest.checkEditProfile" configurationId="TestNG" />
+    <history-entry file="RegistrationTest - 2017.10.26 at 16h 23m 37s.xml">
+      <configuration name="RegistrationTest" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -536,10 +555,10 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33559322" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3355856" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17716116" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16808964" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -565,12 +584,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/EditProfileTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/EmailValidationTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/RegistrationTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/ForgotPasswordTest.java" />
@@ -627,7 +645,7 @@
         <state relative-caret-position="-313">
           <caret line="41" column="10" lean-forward="false" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -637,11 +655,9 @@
         <state relative-caret-position="333">
           <caret line="103" column="99" lean-forward="false" selection-start-line="103" selection-start-column="54" selection-end-line="103" selection-end-column="99" />
           <folding>
-            <element signature="method#Registration#0;class#PageObjectForRegistration#0" expanded="false" />
             <element signature="method#Next1#0;class#PageObjectForRegistration#0" expanded="false" />
             <element signature="method#Surname#0;class#PageObjectForRegistration#0" expanded="false" />
             <element signature="method#Name#0;class#PageObjectForRegistration#0" expanded="false" />
-            <element signature="method#MiddleName#0;class#PageObjectForRegistration#0" expanded="false" />
             <element signature="method#Email#0;class#PageObjectForRegistration#0" expanded="false" />
             <element signature="method#Next2#0;class#PageObjectForRegistration#0" expanded="false" />
             <element signature="method#Primary_Address#0;class#PageObjectForRegistration#0" expanded="false" />
@@ -698,22 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/EmailValidationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ForgotPasswordTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="31" column="36" lean-forward="false" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -722,24 +722,50 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../EditProfileTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/AccountDelationTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageOdjects/POF_EditProfile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="43" column="39" lean-forward="false" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+        <state relative-caret-position="321">
+          <caret line="51" column="40" lean-forward="false" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ForgotPasswordTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="38" column="69" lean-forward="false" selection-start-line="38" selection-start-column="69" selection-end-line="38" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageOdjects/POF_ForgotPsw.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageOdjects/Waiters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="55" column="123" lean-forward="false" selection-start-line="55" selection-start-column="123" selection-end-line="55" selection-end-column="123" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pageOdjects/PageObjectForRegistration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1210">
-          <caret line="132" column="30" lean-forward="false" selection-start-line="132" selection-start-column="30" selection-end-line="132" selection-end-column="30" />
+        <state relative-caret-position="1474">
+          <caret line="138" column="33" lean-forward="false" selection-start-line="138" selection-start-column="33" selection-end-line="138" selection-end-column="33" />
           <folding>
-            <element signature="method#Registration#0;class#PageObjectForRegistration#0" expanded="false" />
             <element signature="method#Next1#0;class#PageObjectForRegistration#0" expanded="false" />
             <element signature="method#Surname#0;class#PageObjectForRegistration#0" expanded="false" />
             <element signature="method#Name#0;class#PageObjectForRegistration#0" expanded="false" />
-            <element signature="method#MiddleName#0;class#PageObjectForRegistration#0" expanded="false" />
             <element signature="method#Email#0;class#PageObjectForRegistration#0" expanded="false" />
             <element signature="method#Next2#0;class#PageObjectForRegistration#0" expanded="false" />
             <element signature="method#Primary_Address#0;class#PageObjectForRegistration#0" expanded="false" />
@@ -763,39 +789,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/RegistrationTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/EmailValidationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="37" column="30" lean-forward="true" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+        <state relative-caret-position="537">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pageOdjects/Waiters.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/RegistrationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="39" column="65" lean-forward="false" selection-start-line="39" selection-start-column="65" selection-end-line="39" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pageOdjects/POF_EditProfile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="51" column="40" lean-forward="false" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
+        <state relative-caret-position="550">
+          <caret line="38" column="44" lean-forward="false" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/EditProfileTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="46" column="44" lean-forward="false" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="484">
+          <caret line="43" column="43" lean-forward="true" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/AccountDelationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

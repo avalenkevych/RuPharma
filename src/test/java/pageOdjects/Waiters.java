@@ -39,6 +39,22 @@ public class Waiters {
         WebDriverWait wait = new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.visibilityOf(elementLocator));
     }
+    public void registrationLinkWaiter(WebElement elementLocator){
+        WebDriverWait wait = new WebDriverWait(driver, 15);
+        wait.until(ExpectedConditions.visibilityOf(elementLocator));
+    }
+    public void nextBtnWaiter (WebElement elementLocator){
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.visibilityOf(elementLocator));
+    }
+    public void forgotConfirmMessageWaiter(WebElement elementLocator){
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.textToBePresentInElement(elementLocator, "На адрес Вашей электронной почты была выслана ссылка с временным паролем."));
+    }
+    public void emailErrorWaiter(WebElement elementLocator){
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.textToBePresentInElement(elementLocator,"Адрес электронной почты: неверный формат"));
+    }
 
 
 }

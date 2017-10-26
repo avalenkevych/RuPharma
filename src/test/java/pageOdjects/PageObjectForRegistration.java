@@ -131,6 +131,12 @@ public class PageObjectForRegistration {
 
     @FindBy(css = ".quiz-start-link")
     public WebElement quizBtn;
+    @FindBy(css = ".grv_register_open.register")
+    public WebElement registrationLink;
+    @FindBy(id = "edit-next")
+    public WebElement quizNext;
+    @FindBy(css = "#capture_traditionalRegistration_form_item_email > div.capture_tip_error")
+    public WebElement erroeEmail;
 
 
 

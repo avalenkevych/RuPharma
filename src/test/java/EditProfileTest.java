@@ -44,6 +44,7 @@ public class EditProfileTest {
         Waiters wait = new Waiters(driver);
         // wait for presence login link
         wait.loginLinkWaiter(UserLogin.Login);
+        Thread.sleep(2000);
         UserLogin.Login_Action("testemail143@yopmail.com","zPau7ZXr");
         //wait for successful login and displayed username
         wait.successfullLoginWaiter(EditProfile.username_link);
