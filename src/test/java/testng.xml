@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestAll">
+
+	<test name="order">
+		<classes>
+			<class name="RegistrationTest" />
+			<class name="EditProfileTest" />
+			<class name="ForgotPasswordTest" />
+			<class name="EmailValidationTest" />
+			<class name="AccountDelationTest" />
+			
+		</classes>
+	</test>
+
+	
+
+</suite>

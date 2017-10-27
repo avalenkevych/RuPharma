@@ -34,7 +34,7 @@ public class ForgotPasswordTest {
         Login.Login.click();
         Thread.sleep(2000);
         ForgotPsw.forgotPswLink.click();
-        ForgotPsw.forgotEmail.sendKeys("testemail145@yopmail.com");
+        ForgotPsw.forgotEmail.sendKeys("testemail148@yopmail.com");
         ForgotPsw.forgotSentBtn.click();
         wait.forgotConfirmMessageWaiter(ForgotPsw.forgotConfMessage);
 
