@@ -45,7 +45,7 @@ public class EmailValidationTest {
         Thread.sleep(2000);
         PageObjectForRegistration.Registration(driver).click();
         PageObjectForRegistration.Next1(driver).click();
-        PageObjectForRegistration.Email(driver).sendKeys(email);
+        PageObjectForRegistration.Email_Validation(driver).sendKeys(email);
         PageObjectForRegistration.MiddleName(driver).click();
         wait.emailErrorWaiter(RegisterUser.erroeEmail);
 

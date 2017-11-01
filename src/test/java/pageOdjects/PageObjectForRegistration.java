@@ -9,6 +9,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class PageObjectForRegistration {
     WebDriver driver;
+    public String username = "testemail150@yopmail.com";
+    public String password = "zPau7ZXr";
     public static WebElement element=null;
     public static WebElement Registration(WebDriver driver){
         element = driver.findElement(By.cssSelector(".grv_register_open.register"));
@@ -30,7 +32,11 @@ public class PageObjectForRegistration {
         element = driver.findElement(By.cssSelector("#capture_traditionalRegistration_middleName"));
         return element;
     }
-    public static WebElement Email (WebDriver driver){
+    public void  Email (WebDriver driver){
+        element = driver.findElement(By.cssSelector("#capture_traditionalRegistration_email"));
+        element.sendKeys(username);
+    }
+    public static WebElement  Email_Validation (WebDriver driver){
         element = driver.findElement(By.cssSelector("#capture_traditionalRegistration_email"));
         return element;
     }
@@ -122,10 +128,12 @@ public class PageObjectForRegistration {
     @FindBy (id = "capture_signIn_traditionalSignIn_signInButton")
     @CacheLookup
     public WebElement SignIn;
-    public void Login_Action (String sUsername, String sPassword){
+
+
+    public void Login_Action (){
         Login.click();
-        Login_Email.sendKeys(sUsername);
-        Login_Password.sendKeys(sPassword);
+        Login_Email.sendKeys(username);
+        Login_Password.sendKeys(password);
         SignIn.click();
     }
 

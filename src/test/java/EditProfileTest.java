@@ -45,7 +45,7 @@ public class EditProfileTest {
         // wait for presence login link
         wait.loginLinkWaiter(UserLogin.Login);
         Thread.sleep(2000);
-        UserLogin.Login_Action("testemail148@yopmail.com","zPau7ZXr");
+        UserLogin.Login_Action();
         //wait for successful login and displayed username
         wait.successfullLoginWaiter(EditProfile.username_link);
         EditProfile.username_link.click();

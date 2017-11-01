@@ -36,7 +36,7 @@ public class RegistrationTest {
         // wait for presence login link
         wait.loginLinkWaiter(UserLogin.Login);
         Thread.sleep(2000);
-        UserLogin.Login_Action("testemail148@yopmail.com","zPau7ZXr");
+        UserLogin.Login_Action();
         wait.quizWaiter(UserLogin.quizBtn);
         PageObjectForRegistration.Start_Quiz(driver).click();
 
@@ -102,7 +102,7 @@ public class RegistrationTest {
         PageObjectForRegistration.Surname(driver).sendKeys("Surname");
         PageObjectForRegistration.Name(driver).sendKeys("Name");
         PageObjectForRegistration.MiddleName(driver).sendKeys("MiddleName");
-        PageObjectForRegistration.Email(driver).sendKeys("testemail148@yopmail.com");
+        RegisterUser.Email(driver);
         PageObjectForRegistration.Next2(driver).click();
         PageObjectForRegistration.Primary_Address(driver).sendKeys("Москва");
         PageObjectForRegistration.State(driver).click();
