@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class PageObjectForRegistration {
     WebDriver driver;
-    public String username = "testemail150@yopmail.com";
+    public String username = "testemail154@yopmail.com";
     public String password = "zPau7ZXr";
     public static WebElement element=null;
     public static WebElement Registration(WebDriver driver){
@@ -60,6 +60,10 @@ public class PageObjectForRegistration {
         element = driver.findElement(By.xpath(".//*[@id='capture_traditionalRegistration_designation_specialty']/option[2] "));
         return element;
     }
+    public static WebElement Gender (WebDriver driver){
+        element = driver.findElement(By.cssSelector("#capture_traditionalRegistration_form_item_gender_Мужской_0"));
+        return element;
+    }
     public static WebElement Next4 (WebDriver driver){
         element = driver.findElement(By.cssSelector(".next_btn.fourth"));
         return element;
@@ -73,7 +77,11 @@ public class PageObjectForRegistration {
         return element;
     }
     public static WebElement Street_Name(WebDriver driver){
-        element = driver.findElement(By.cssSelector("#capture_traditionalRegistration_primaryAddress_streetName1"));
+        element = driver.findElement(By.cssSelector("#capture_traditionalRegistration_primaryAddress_streetOnly1"));
+        return element;
+    }
+    public static WebElement House_Number(WebDriver driver){
+        element = driver.findElement(By.cssSelector("#capture_traditionalRegistration_primaryAddress_numberOnly1"));
         return element;
     }
     public static WebElement Next5(WebDriver driver){
@@ -113,7 +121,7 @@ public class PageObjectForRegistration {
         return element;
     }
     public static WebElement Dni (WebDriver driver){
-        element = driver.findElement(By.xpath("//*[text()='15 дней']"));
+        element = driver.findElement(By.xpath("//*[text()='Нейролептики и транквилизаторы']"));
         return element;
     }
     @FindBy (css =".capture_modal_open.login")

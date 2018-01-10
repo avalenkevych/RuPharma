@@ -22,7 +22,7 @@ public class AccountDelationTest {
     public void setUp(){
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
-        driver.get("https://pfizerweb:AlwaysBeingGood6@pfpfda247rustg.prod.acquia-sites.com/");
+        driver.get("https://webguard:Looking4AnAnswer@pfpfda247rudev.prod.acquia-sites.com/");
 
     }
     @AfterMethod

@@ -53,7 +53,7 @@ public class Waiters {
     }
     public void emailErrorWaiter(WebElement elementLocator){
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.textToBePresentInElement(elementLocator,"Адрес электронной почты: неверный формат"));
+        wait.until(ExpectedConditions.textToBePresentInElement(elementLocator,"Пожалуйста, введите электронную почту в формате example@domain.ru"));
     }
 
 

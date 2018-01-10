@@ -20,7 +20,7 @@ public class RegistrationTest {
     public void setUp(){
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
-        driver.get("https://pfizerweb:AlwaysBeingGood6@pfpfda247rustg.prod.acquia-sites.com/");
+        driver.get("https://webguard:Looking4AnAnswer@pfpfda247rudev.prod.acquia-sites.com/");
     }
 
     @AfterMethod
@@ -37,8 +37,9 @@ public class RegistrationTest {
         wait.loginLinkWaiter(UserLogin.Login);
         Thread.sleep(2000);
         UserLogin.Login_Action();
-        wait.quizWaiter(UserLogin.quizBtn);
-        PageObjectForRegistration.Start_Quiz(driver).click();
+        Thread.sleep(8000);
+        //wait.quizWaiter(UserLogin.quizBtn);
+        //PageObjectForRegistration.Start_Quiz(driver).click();
 
         if (driver.getPageSource().contains("Виагра")) {
 
@@ -108,11 +109,16 @@ public class RegistrationTest {
         PageObjectForRegistration.State(driver).click();
         PageObjectForRegistration.Next3(driver).click();
         PageObjectForRegistration.Specialty(driver).click();
+        PageObjectForRegistration.Gender(driver).click();
         PageObjectForRegistration.Next4(driver).click();
         PageObjectForRegistration.Phone_Number(driver).sendKeys("+79991234567");
         PageObjectForRegistration.Work_Place(driver).sendKeys("ГКБ им. С.П.Ботника");
-        PageObjectForRegistration.Street_Name(driver).sendKeys("ул. Ломоносова 45");
+        PageObjectForRegistration.Street_Name(driver).sendKeys("ул.Ломоносова");
+        PageObjectForRegistration.House_Number(driver).sendKeys("45");
+
         PageObjectForRegistration.Next5(driver).click();
+        PageObjectForRegistration.Next5(driver).click();
+
         PageObjectForRegistration.Password(driver).sendKeys("zPau7ZXr");
         PageObjectForRegistration.Password_Confirm(driver).sendKeys("zPau7ZXr");
         PageObjectForRegistration.CheckBox(driver).click();

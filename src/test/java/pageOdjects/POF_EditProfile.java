@@ -57,22 +57,22 @@ public class POF_EditProfile {
     public void Update_Name_Action (String sName){
         Name_Upd.clear();
         Name_Upd.sendKeys(sName);
-        Assert.assertEquals(Name_Upd.getAttribute("value"), "Name Updated");
+        Assert.assertEquals(Name_Upd.getAttribute("value"), "Name updated");
     }
     public void Update_Surname_Action (String sSurname){
         Surname_Upd.clear();
         Surname_Upd.sendKeys(sSurname);
-        Assert.assertEquals(Surname_Upd.getAttribute("value"), "Surname Updated");
+        Assert.assertEquals(Surname_Upd.getAttribute("value"), "Surname updated");
     }
     public void Update_MidName_Action (String sMidName){
         MiddleName_Upd.clear();
         MiddleName_Upd.sendKeys(sMidName);
-        Assert.assertEquals(MiddleName_Upd.getAttribute("value"), "MiddleName Updated");
+        Assert.assertEquals(MiddleName_Upd.getAttribute("value"), "Middlename updated");
     }
     public void Update_Address_Action (String sAddress){
         PrimaryAddress_Upd.clear();
         PrimaryAddress_Upd.sendKeys(sAddress);
-        Assert.assertEquals(PrimaryAddress_Upd.getAttribute("value"), "Санкт-Петербург");
+        Assert.assertEquals(PrimaryAddress_Upd.getAttribute("value"), "Санкт-петербург");
     }
     public void Update_Phone_Action (String sPhone){
         Phone_Upd.clear();
@@ -82,7 +82,7 @@ public class POF_EditProfile {
     public void Update_Work_Action (String sWork){
         Work_Upd.clear();
         Work_Upd.sendKeys(sWork);
-        Assert.assertEquals(Work_Upd.getAttribute("value"), "МГУ");
+            Assert.assertEquals(Work_Upd.getAttribute("value"), "МГУ");
     }
     public void Update_Street_Action (String sStreet){
         Street_Upd.clear();

@@ -1,15 +1,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="TestAll">
+<suite name="TestAll" parallel="classes" thread-count="2">
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter"/>
+	</listeners>
 
 	<test name="order">
 		<classes>
+
 			<class name="RegistrationTest" />
 			<class name="EditProfileTest" />
 			<class name="ForgotPasswordTest" />
 			<class name="EmailValidationTest" />
 			<class name="AccountDelationTest" />
-			
+
 		</classes>
 	</test>
 

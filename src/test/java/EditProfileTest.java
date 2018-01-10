@@ -29,7 +29,7 @@ public class EditProfileTest {
     public void setUp(){
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
-        driver.get("https://pfizerweb:AlwaysBeingGood6@pfpfda247rustg.prod.acquia-sites.com/");
+        driver.get("https://webguard:Looking4AnAnswer@pfpfda247rudev.prod.acquia-sites.com/");
     }
     @AfterMethod
     public void tearDown(){
@@ -59,6 +59,7 @@ public class EditProfileTest {
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         EditProfile.ChangeData_Btn.click();
+        Thread.sleep(2000);
         EditProfile.Update_Name_Action("Name Updated");
         EditProfile.Update_Surname_Action("Surname Updated");
         EditProfile.Update_MidName_Action("MiddleName Updated");

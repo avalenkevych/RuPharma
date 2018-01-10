@@ -19,7 +19,7 @@ public class ForgotPasswordTest {
     public void setUp(){
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
-        driver.get("https://pfizerweb:AlwaysBeingGood6@pfpfda247rustg.prod.acquia-sites.com/");
+        driver.get("https://webguard:Looking4AnAnswer@pfpfda247rudev.prod.acquia-sites.com/");
     }
     @AfterMethod
     public void tearDown(){
@@ -34,7 +34,7 @@ public class ForgotPasswordTest {
         Login.Login.click();
         Thread.sleep(2000);
         ForgotPsw.forgotPswLink.click();
-        ForgotPsw.forgotEmail.sendKeys("testemail148@yopmail.com");
+        ForgotPsw.forgotEmail.sendKeys("testemail154@yopmail.com");
         ForgotPsw.forgotSentBtn.click();
         wait.forgotConfirmMessageWaiter(ForgotPsw.forgotConfMessage);
 
